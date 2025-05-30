@@ -1,0 +1,122 @@
+a {
+    text-decoration: none; /* Removes the underline */
+    color: white; /* Sets the text color to white */
+}
+
+.navBar{
+    height: 100px;
+    width: 100%;
+    /* background-color: #201d1d; */
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); */
+    /* margin-bottom: -70px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+}
+
+.leftBar{
+    width: 60px;
+    /* padding-left: 10px; */
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    /* margin-right: -20px; */
+}
+
+.rightBar{
+    height: 75px;
+    /* margin-left: 30px; */
+}
+
+.fa-bars {
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 0px;
+    /* width: 50px; Set a fixed width */
+    /* height: 50px; Set a fixed height */
+    line-height: 50px; /* Align the icon vertically */
+    text-align: center; /* Center the icon horizontally */
+    border-radius: 50%; /* Make it circular */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.fa-bars:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fa-xmark{
+    color: white;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.fa-house{
+    color: white;
+}
+
+.fa-chart-line{
+    color: white;
+}
+
+.sideBar{
+    position: fixed;
+    left: 0;
+    /* top: 70px; Full height */
+    width: 150px;
+    height: 100%;
+    background: #103c74;
+    /* border-right: solid 0.5px rgba(0, 0, 0, 0.2); */
+    transform: translateX(-250px); /* Hidden by default */
+    transition: transform 0.3s ease; /* Smooth transition */
+    z-index: 1;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.sideBar.active {
+    transform: translateX(0); /* Slide the sidebar into view */
+}
+
+.sideBar.inactive{
+    transform: translateX(-250px);
+}
+
+#side-bar-top{
+    width: 135px;
+    /* background-color: #201d1d; */
+    /* background-image: linear-gradient(to right, #edc85d , #f5dd58, #fbe39b); */
+    /* background-image: linear-gradient(to right, #002767 , #134492, #2e5daa); */
+    background-color: #103c74;
+    height: 70px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 15px;
+    /* justify-content: center; */
+    align-items: center;
+    color: white;
+    border-radius: 0px 30px 0px 0px;
+}
+
+.menu-item{
+    color: white;
+    height: 60px;
+    /* border-bottom: solid 0.5px rgba(0, 0, 0, 0.2); */
+    padding-left: 15px;
+    cursor: pointer;
+    display: flex; 
+    align-items: center; 
+}
+
+.menuitem:hover{
+    color: #e55604;
+}
+

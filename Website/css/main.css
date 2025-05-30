@@ -1,0 +1,212 @@
+.fa-bars {
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 15px;
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    line-height: 50px; /* Align the icon vertically */
+    text-align: center; /* Center the icon horizontally */
+    border-radius: 50%; /* Make it circular */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+@media only screen and (min-width: 2500px) {
+    #main{
+        width: 60%;
+    }
+    #all{
+        justify-content: center;
+    }
+    /* .navBar{
+        background-color: red;
+    } */
+  }
+
+  @media only screen and (max-width: 1700px) {
+    #main{
+        width: 100%;
+    }
+    #all{
+        justify-content: center;
+    }
+  }
+
+.fa-bars:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+#main{
+    /* width: 100%; */
+    transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+    background-color: #e5e8ef;
+}
+
+.body-section{
+    display: flex;
+}
+
+.section{
+    height: 850px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    padding-left: 25px;
+    /* align-items: center; */
+}
+
+#section1{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    justify-content: space-between;
+}
+
+#section1-left{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-left: 25px;
+}
+
+
+.section2{
+    height: 830px;
+    width: 25%;
+    display: flex;
+    justify-content: end;
+    padding-right: 25px;
+}
+
+.section1-left-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#all{
+    display: flex;
+    width: 100%;
+}
+
+.message-holder{
+    display: flex;
+    flex-direction: column;
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arimo';font-size: 15px;
+    background-color:#e5e8ef;
+    ;
+}
+
+#section1-left-last{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+    #dashboard-top {
+      flex-direction: column; 
+      align-items: center;
+    }
+    #cards, #status-holder{
+        width: 95%;
+        /* background-color: red; */
+    }
+    #section1{
+        flex-direction: column;
+    }
+    #section1{
+        flex-direction: column;
+    }
+    .section1-left-bottom{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    #infoBox{
+        width: 95%;
+        /* height: 300px; */
+        /* align-items: center; */
+        /* justify-content: center; */
+    }
+    #section1-left{
+        padding: 0;
+        width: 100%;
+        margin-top: 15px;
+    }
+    #section1-left-bottom-left{
+        width: 100%;
+        justify-content: center;
+        margin-top: 15PX;
+    }
+    .recent-activity{
+        width: 80%;
+    }
+    body{
+        font-size: 12px;
+    }
+    .fa-bars{
+        margin-right: 0;
+    }
+    .topBox{
+        height: 40px;
+        margin-bottom: 0px;
+        justify-content: center;
+    }
+    .circle{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #temp{
+        display: none;
+    }
+    .bottomBox{
+        height: 275px;
+    }
+    #title-holder{
+        font-size: 50px;
+    }
+    #value-holder{
+        font-size: 70px;
+    }
+    #bottom-titles{
+        font-size: 15px;
+        width: 25%;
+    }
+    
+    #prod-rate-val{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    #sd-val{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    #three-val{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    #cgs-val{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    #chart-display{
+        height: 200px;
+    }
+    #week-options{
+        /* flex-direction: column; */
+        width: 50%;
+    }
+    #date-pick-holder{
+        width: 40%;
+    }
+  }
+

@@ -1,0 +1,140 @@
+.recent-activity{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    height: 450px;
+}
+
+.fa-bell{
+    color: white;
+
+}
+
+#section1-left-bottom-left{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-box{
+    height: 20px;
+    /* background-image: linear-gradient(to right, #002767 , #134492, #2e5daa); */
+    background-color: white;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 20px;
+    color: black;
+    font-weight: bold;
+
+}
+.body-box{
+    height: 400px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entry{
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.time{
+
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-start; */
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+ 
+}
+/* #space-holder{
+    width: 20px;
+} */
+/* #103c74 */
+
+.circle-holder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.message-holder{
+    /* display: flex;
+    flex-direction: column; */
+    width: 25%;
+}
+
+.dot{
+    width: 40px;
+    height: 40px;
+    background-color: #103c74;
+    border-radius: 25px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert{
+    width: 58%;
+    height: 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.alert-top{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.alert-bottom{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+tr{
+    width: 100%;
+}
+
+#recent-activity-table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.td1{
+    width: 25%;
+    padding-left: 5%;
+    height: 75px;
+}
+
+.td2{
+    width: 20%;
+    height: 75px;
+}
+
+.td3{
+    /* padding-left: 3%; */
+    width: 55%;
+    height: 75px;
+}

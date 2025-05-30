@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e25e8fb234.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="https://kit.fontawesome.com/e25e8fb234.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/charts.css">
+<link rel="stylesheet" href="css/recent-activity.css">
+<link rel="stylesheet" href="css/bars.css">
+<link rel="stylesheet" href="css/top.css">
+<link rel="stylesheet" href="css/tables.css">
+
+<body>
+    <div id="all">
+        <div class="sideBar">
+            <div id="side-bar-top">
+                <i class="fa-solid fa-xmark"></i> Close
+            </div>
+    
+            <div class="menu-item"> 
+                <i class="fa-solid fa-house" style="margin-right: 10px;"></i> <a href="index.html">Dashboard</a>
+            </div>
+    
+            <div class="menu-item" > 
+                <i class="fa-solid fa-chart-line" style="margin-right: 10px;"></i> <a href="activity.html">Activity</a>
+            </div>
+    
+            <div class="menu-item" style="background-color: #edc85d; border-radius: 0px 30px 30px 0px; width: 85%;"> 
+                <i class="fa-solid fa-arrow-trend-up" style="margin-right: 10px;"></i> <a href="production.html">Production</a>
+            </div>
+        </div>
+    
+        <div id="main">
+            <div class="navBar">
+    
+                <div class="leftBar">
+                    <i class="fas fa-bars"></i>
+                </div>
+    
+                <div class="rightBar">
+                    <h1 style="margin-bottom: 0;"">Production History</h1>
+                    <h4 style="margin-top: 0;"">January 4, 2025</h4>
+                </div>
+
+                <div class="right-right-bar">
+
+                </div>
+    
+            </div>
+    
+            <div class="cont">
+                <div id="activity-top">
+
+                    <div id="search-holder">
+                        <input type="search" style="height:30px" id="search-bar-prod">
+                    </div>
+
+                    <div id="date-pick-holder">
+                        <div id="reportrange" class="datepick" style="background-color: #f1f3f9;">
+                            <i class="fa fa-calendar"></i>&nbsp;
+                            <span style="margin-left: 5px; margin-right: 10px;"></span> <i class="fa fa-caret-down"></i>
+                        </div>
+        
+                        <script src="javascript/tableDate.js"></script>
+                    </div>
+                </div>
+
+                <div id="holder">
+                    <table id="activity-table">
+                        <form action="" id="table-form">
+                            <thead>
+                                <tr>
+                                    <th><label class="button-header">
+                                        <input type="radio" name="header" value="plant" class="hidden-radio">
+                                        <i class="fa-solid fa-sort-up" id="plant-sort"></i>
+                                        Plant
+                                    </label></th>
+                                    <th><label class="button-header">
+                                        <input type="radio" name="header" value="date" class="hidden-radio">
+                                        <i class="fa-solid fa-sort-down" id="date-sort"></i>
+                                        Date
+                                    </label></th>
+                                    <th><label class="button-header">
+                                        <input type="radio" name="header" value="material" class="hidden-radio">
+                                        <i class="fa-solid fa-sort-up" id="material-sort"></i>
+                                        Material
+                                    </label></th>
+                                    <th><label class="button-header">
+                                        <input type="radio" name="header" value="sum" class="hidden-radio">
+                                        <i class="fa-solid fa-sort-up" id="sum-sort"></i>
+                                        Amount (Tonnes)
+                                    </label></th>
+                                </tr>
+                            </thead>
+                        </form>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+    
+                    <div id="table-nav">
+                        <div id="prev">
+                            <button id="prev-button">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </button>
+                        </div>
+                        <div id="numbers"></div>
+                        
+                        <div id="next">
+                            <button id="next-button">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+    
+                    <script src="javascript/productionHistory.js"></script>
+                </div>
+                
+               
+                
+
+            </div>
+            
+        </div>
+    
+       <script src="javascript/sideBar.js"></script>
+    </div>
+</body>
+</html>

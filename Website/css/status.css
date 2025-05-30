@@ -1,0 +1,133 @@
+.status{
+    /* display: flex; */
+    width: 100px;
+    /* padding-left: ; */
+    /* align-items: center; */
+    height: 20px;
+}
+
+.status-table{
+    width: 100px;
+}
+
+#top-top{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+}
+
+.crusher-status-circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(208, 16, 16);
+    /* margin-left: 20px; */
+    margin-right: 5px;
+}
+
+#crusher-status-message{
+    color: rgb(208, 16, 16);
+    width: 60px;
+    font-size: 10px;
+    height: 25px;
+    background-color: rgb(250, 140, 140);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    margin-left: 10px;
+}
+
+.screen-status-circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(208, 16, 16);
+    /* margin-left: 20px; */
+    margin-right: 5px;
+}
+
+
+
+#screen-status-message{
+    color: rgb(208, 16, 16);
+    width: 60px;
+    font-size: 10px;
+    height: 25px;
+    background-color: rgb(250, 140, 140);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    margin-left: 10px;
+    /* font-weight: 600; */
+}
+
+#conveyor-status-message{
+    color: rgb(208, 16, 16);
+    width: 60px;
+    font-size: 10px;
+    height: 25px;
+    background-color: rgb(250, 140, 140);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    margin-left: 10px;
+    /* font-weight: 600; */
+}
+
+.status-machine-name{
+    /* padding-left: px; */
+    width: 20px;
+    font-size: 10px;
+}
+
+#status-holder{
+    width: 35%;
+    background-color: white;
+    height: 210px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    /* margin-bottom: 15px; */
+}
+
+#map{
+    /* background-color: blue; */
+    height: 170px;
+}
+
+svg{
+    width: 100%;
+    height: 100%;
+}
+
+.tooltip {
+    position: absolute;
+    /* display: none; */
+    opacity: 0;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+  }
+
+  #crusher:hover + #crusherTooltip{
+    /* display: block; */
+    opacity: 1;
+  }
+
+  #screen:hover + #screenTooltip{
+    /* display: block; */
+    opacity: 1;
+  }
+
+  .conveyors:hover + #conveyorTooltip{
+    opacity: 1;
+  }

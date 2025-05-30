@@ -1,0 +1,87 @@
+#gen-report{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#report-form{
+    width: 100%;
+}
+
+#summary-div{
+    width: 50%;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.summary-displays{
+    width: 85%;
+    border-radius: 20px 20px 20px 20px;
+    background-color: grey;
+    height: 60px;
+}
+
+#filter-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 50px;
+    width: 100%;
+}
+
+#gen-report-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.fa-plus{
+    font-size: 50px;
+    color: white;
+}
+
+#gen-report-button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background-color: #103c74;
+    margin-bottom: 15px;
+}
+
+#download-submit{
+    width: 80%;
+    height: 30px;
+    background-color: #103c74;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#download-submit:hover{
+    cursor: pointer;
+}
+
+#report-submit{
+    width: 80%;
+    height: 30px;
+    background-color: #103c74;
+    color: white;
+    margin-bottom: 10px;
+    border: none;
+}
+
+#report-submit:hover{
+    cursor: pointer;
+    
+}

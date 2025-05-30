@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e25e8fb234.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+
+<link rel="stylesheet" href="css/charts.css">
+<link rel="stylesheet" href="css/recent-activity.css">
+<link rel="stylesheet" href="css/bars.css">
+<link rel="stylesheet" href="css/top.css">
+<link rel="stylesheet" href="css/variable-graph.css">
+<link rel="stylesheet" href="css/right-side.css">
+<link rel="stylesheet" href="css/bottom.css">
+<link rel="stylesheet" href="css/status.css">
+<link rel="stylesheet" href="css/main.css">
+
+
+<body>
+
+    <div id="all">
+        <div class="sideBar">
+            <div id="side-bar-top">
+                <i class="fa-solid fa-xmark"></i> Close
+            </div>
+    
+            <div class="menu-item" style="background-color: #edc85d; border-radius: 0px 30px 30px 0px; width: 85%;"> 
+                <i class="fa-solid fa-house" style="margin-right: 10px;"></i> <a href="index.html">Dashboard</a>
+            </div>
+    
+            <div class="menu-item"> 
+                <i class="fa-solid fa-chart-line" style="margin-right: 10px;"></i> <a href="activity.html">Activity</a>
+            </div>
+    
+            <div class="menu-item"> 
+                <i class="fa-solid fa-arrow-trend-up" style="margin-right: 10px;"></i> <a href="production.html">Production</a>
+            </div>
+        </div>
+    
+        <div id="main">
+            <div class="navBar">
+                <div style="display: flex;">
+                    <div class="leftBar">
+                        <i class="fas fa-bars"></i>
+                    </div>
+        
+                    <div class="rightBar">
+                        <h1 style="margin-bottom: 0;"">Dashboard</h1>
+                        <h4 style="margin-top: 0;"">January 4, 2025</h4>
+                    </div>
+                </div>
+    
+                
+
+                <div style="height: 75px; display: flex; margin-right: 15px;align-items: center; width: 180px; justify-content: space-between;">
+                    <i class="fa-regular fa-bell" style="color: black; font-size: 24px;"></i>
+                    <div style="background-color: #103c74; height: 40px; width: 40px; border-radius: 50%; margin-left: 10px; display: flex; justify-content: center; align-items: center;">
+                        <img src="logo.png" alt="" width="35px" height="20px">
+                    </div>
+                    <h4 style="padding: 0; margin: 0;">Lydford Mining</h4>
+                </div>
+    
+            </div>
+    
+            <div class="container">
+    
+                <!-- <div class="dashboard">
+    
+                    <img src="logo.png" alt="" style="width: 500px;"> -->
+    
+                    <!-- <div id="date-pick-holder">
+                        <div id="reportrange" class="datepick">
+                            <i class="fa fa-calendar"></i>&nbsp;
+                            <span style="margin-left: 5px; margin-right: 10px;"></span> <i class="fa fa-caret-down"></i>
+                        </div>
+        
+                        <script src="javascript/datepicker.js"></script>
+                    </div> -->
+                <!-- </div> -->
+                <div id="dashboard-top">
+                    <div style="width: 25px;"></div>
+                    <div id="cards">
+                        <div id="heading-div"">Today's Totals</div>
+                        <div id="subheading-filter">
+                            <div id="sub-heading-div">Production Summary</div>
+                            <div style="display: flex; width: 35%; justify-content: space-evenly;">
+                                <div id="relief-bush">
+                                    <label class="button-header">
+                                        <input type="radio" name="summary-filter" value="relief-bush" class="hidden-radio" checked>
+                                        Relief Bush
+                                    </label>
+                                </div>
+                                <div id="black-heath">
+                                    <label class="button-header">
+                                        <input type="radio" name="summary-filter" value="black-heath" class="hidden-radio">
+                                        Black Heath
+                                    </label>
+                                </div>
+                                <div id="cedar-valley">
+                                    <label class="button-header">
+                                        <input type="radio" name="summary-filter" value="cedar-valley" class="hidden-radio">
+                                        Cedar Valley
+                                    </label>
+                                </div>  
+                            </div>
+                            <script src="javascript/summary.js"></script>
+                        </div>
+                        <div class="card-container">
+                        
+                            <div class="card">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-chart-simple"></i>
+                                </div>
+                                <!-- <div class="card-right"> -->
+                                    <div class="card-right-bottom">
+                                        <h4>1542 Tonnes</h4>
+                                    </div>
+                                    <div class="card-right-top">
+                                        Total Produced
+                                    </div>
+                                    
+                                <!-- </div> -->
+                            </div>
+            
+                            <div class="card">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-chart-simple"></i>
+                                </div>
+                                <!-- <div class="card-right"> -->
+                                    <div class="card-right-bottom">
+                                        <h4>08:03:23</h4>
+                                    </div>
+                                    <div class="card-right-top">
+                                        Screen Runtime
+                                    </div>
+                            </div>
+            
+                            <div class="card">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-chart-simple"></i>
+                                </div>
+                                <!-- <div class="card-right"> -->
+                                    <div class="card-right-bottom">
+                                        <h4>08:03:23</h4>
+                                    </div>
+                                    <div class="card-right-top">
+                                        Crusher Runtime
+                                    </div>
+                            </div>
+            
+                            <div class="card">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-chart-simple"></i>
+                                </div>
+                                <!-- <div class="card-right"> -->
+                                    <div class="card-right-bottom">
+                                        <h4>08:03:23</h4>
+                                    </div>
+                                    <div class="card-right-top">
+                                        Crusher Runtime
+                                    </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-chart-simple"></i>
+                                </div>
+                                <!-- <div class="card-right"> -->
+                                    <div class="card-right-bottom">
+                                        <h4>08:03:23</h4>
+                                    </div>
+                                    <div class="card-right-top">
+                                        Crusher Runtime
+                                    </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div style="width: 25px;"></div>
+                    <div id="status-holder">
+                        <div id="top-top">
+                            Activity
+                            <!-- <div class="dropdown-filter">
+                                <div class="dropdown-button">Plant</div>
+                                <div class="dropdown-menu">
+                                    <div class="drop-menu-item">
+                                        <label class="menu-item-header">
+                                            <input type="radio" name="menu-filter" value="Relief Bush" class="hidden-radio">
+                                            Relief Bush
+                                        </label>
+                                    </div>
+                                    <div class="drop-menu-item">
+                                        <label class="menu-item-header">
+                                            <input type="radio" name="menu-filter" value="Cedar Valley" class="hidden-radio">
+                                            Cedar Valley
+                                        </label>
+                                    </div>
+                                    <div class="drop-menu-item">
+                                        <label class="menu-item-header">
+                                            <input type="radio" name="menu-filter" value="Black Heath" class="hidden-radio">
+                                            Black Heath
+                                        </label>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div id="map">
+                            <!-- <svg>
+                                <circle cx="10%" cy="30%" r="10" fill="#103c74" />
+                                <text x="20%" y="30%" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="#333">Relief Bush</text>
+                                <circle cx="40%" cy="10%" r="10" fill="#103c74" />
+                                <text x="51%" y="10%" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="#333">Cedar Valley</text>
+                                <circle cx="70%" cy="30%" r="10" fill="#103c74" />
+                                <text x="81%" y="30%" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="#333">Black Heath</text>
+
+                                <foreignObject class="tooltip" x="8%" y="40%" width="125" height="70">
+                                    <table class="status-table">
+                                        <tbody>
+                                            <tr class="status">
+                                                <td class="status-machine-name">Crusher</td>
+                                                <td>
+                                                    <div class="crusher-status-message">
+                                                    
+                                                        Stopped
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="status">
+                                                <td class="status-machine-name">Screen</td>
+                                                <td>
+                                                    <div class="screen-status-message">
+                    
+                                                        Stopped
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </foreignObject>
+                                <foreignObject class="tooltip" x="38%" y="20%" width="125" height="70">
+                                    <table class="status-table">
+                                        <tbody>
+                                            <tr class="status">
+                                                <td class="status-machine-name">Crusher</td>
+                                                <td>
+                                                    <div class="crusher-status-message">
+                                                        
+                                                        Stopped
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="status">
+                                                <td class="status-machine-name">Screen</td>
+                                                <td>
+                                                    <div class="screen-status-message">
+                                                
+                                                        Stopped
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </foreignObject>
+                                <foreignObject class="tooltip" x="68%" y="40%" width="125" height="70">
+                                    <table class="status-table">
+                                        <tbody>
+                                            <tr class="status">
+                                                <td class="status-machine-name">Crusher</td>
+                                                <td>
+                                                    <div class="crusher-status-message">
+                                                      
+                                                        Stopped
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="status">
+                                                <td class="status-machine-name">Screen</td>
+                                                <td>
+                                                    <div class="screen-status-message">
+                                             
+                                                        Stopped
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </foreignObject>
+                            </svg> -->
+                            <svg width="95%" height="95%" >
+                                <!-- Rectangles for components (rotated 90 degrees) -->
+                                
+                                <!-- dotted rectangle -->
+                                <!-- <rect x="80" y="280" width="60" height="40" stroke="black" fill="none" stroke-dasharray="5,5" /> -->
+                            
+                                <rect x="5%" y="30%" width="15%" height="40%"  fill="#e5e8ef" id="crusher"/>
+
+                                <foreignObject class="tooltip" id="crusherTooltip" x="8%" y="60%" width="125" height="40">
+                                    <table class="status-table">
+                                        <tbody>
+                                            <tr class="status">
+                                                <td class="status-machine-name">Crusher</td>
+                                                <td>
+                                                    <div id="crusher-status-message">
+                                                      
+                                                        Stopped
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </foreignObject>
+                                
+                                <rect x="21%" y="40%" width="10%" height="15%"  fill="#e5e8ef" class="conveyors"/>
+                            
+                                <rect x="32%" y="38%" width="15%" height="20%"  fill="#e5e8ef" class="conveyors"/>
+                            
+                                <rect x="48%" y="38%" width="8%" height="20%"  fill="#e5e8ef" class="conveyors"/>
+
+                                <foreignObject class="tooltip" id="conveyorTooltip" x="30%" y="10%" width="125" height="40">
+                                    <table class="status-table">
+                                        <tbody>
+                                            <tr class="status">
+                                                <td class="status-machine-name">Conveyors</td>
+                                                <td>
+                                                    <div id="conveyor-status-message">
+                                                      
+                                                        Stopped
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </foreignObject>
+
+                                <rect x="57%" y="30%" width="15%" height="40%"  fill="#e5e8ef" id="screen"/>
+
+                                <foreignObject class="tooltip" id="screenTooltip" x="73%" y="35%" width="125" height="40">
+                                    <table class="status-table">
+                                        <tbody>
+                                            <tr class="status">
+                                                <td class="status-machine-name">Screen</td>
+                                                <td>
+                                                    <div id="screen-status-message">
+                                                      
+                                                        Stopped
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </foreignObject>
+                            
+                                <!-- Inner dashed box -->
+                                <line x1="60%" y1="30%" x2="60%" y2="1%" style="stroke:#e5e8ef;stroke-width:5%" class="conveyorLines"></line>
+                            
+                                <line x1="70%" y1="35%" x2="85%" y2="10%" style="stroke:#e5e8ef;stroke-width:5%" class="conveyorLines"></line>
+                            
+                                <line x1="70%" y1="65%" x2="85%" y2="90%" style="stroke:#e5e8ef;stroke-width:5%" class="conveyorLines"></line>
+                            
+                                
+                              </svg>
+                            <script src="javascript/plantActivity.js"></script>
+
+                        </div>
+                    </div>
+                    <div style="width: 25px;"></div>
+                    
+                </div>
+                <div id="section1">
+    
+                    <div id="section1-left">
+                        <div class="section1-left-bottom">
+
+
+                            <div id="section1-left-bottom-left">
+                                <div class="recent-activity">
+        
+                                    <div class="header-box">
+                                        Recent Activity
+                                    </div>
+            
+                                    <div class="body-box">
+                                        <table id="recent-activity-table">
+                                            <tbody>
+    
+                                            </tbody>
+                                        </table>
+                                        <script src="javascript/recentActivity.js"></script>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+        
+                            <div id="infoBox">
+                                <div class="topBox" style="margin-bottom: 30px;">
+                                    <div id="temp"></div>
+                                    <div class="circle" onclick="circleClick(0)">Daily</div>
+                                    <div class="circle" onclick="circleClick(1)">Weekly</div>
+                                    <div class="circle" onclick="circleClick(2)">Monthly</div>
+                                    <div class="circle" onclick="circleClick(3)">Yearly</div>
+                                </div>
+                                <div class="bottomBox">
+                                    <div class="box fade">
+                                        <div class="boxInfo" style="flex-direction: column; padding-left: 30px; padding-right: 30px;">
+                                            <table>
+                                                <tr>
+                                                    <td id="title-holder">
+                                                        Total Raw Material
+                                                    </td>
+                                                    <td id="value-holder">
+                                                        2674
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!-- <div id="top">
+                                                <div id="title-holder">
+                                                    Total Raw Material
+                                                </div>
+                                                <div id="value-holder">
+                                                    2674 
+                                                </div>                    
+                        
+                                            </div>    -->
+
+                                            <table>
+                                                <th>
+                                                    <tr>
+                                                        <td id="bottom-titles">Production Rate</td>
+                                                        <td id="bottom-titles">Stone Dust</td>
+                                                        <td id="bottom-titles">3/4" Stone</td>
+                                                        <td id="bottom-titles">CGS</td>
+                                                    </tr>
+                                                </th>
+                                                <tr>
+                                                    <td id="prod-rate-val">50 tonnes/hr</td>
+                                                    <td id="sd-val">456 tonnes</td>
+                                                    <td id="three-val">500 tonnes</td>
+                                                    <td id="cgs-val">650 tonnes</td>
+                                                </tr>
+                                            </table>
+
+                                            <!-- <div id="bottom">
+                                                <div id="left">
+                                                    <div id="bottom-titles">Production Rate</div>
+                                                    <div id="prod-rate-val">50 tonnes/hr</div>
+                                                </div>
+                                                <div id="right">
+                                                    <div class="type-columns">
+                                                        <div id="bottom-titles">Stone Dust</div>
+                                                        <div id="sd-val">456</div>
+                                                    </div>
+                                                    <div class="type-columns">
+                                                        <div id="bottom-titles">3/4" Stone</div>
+                                                        <div id="three-val">456</div>
+                                                    </div>
+                                                    <div class="type-columns">
+                                                        <div id="bottom-titles">CGS</div>
+                                                        <div id="cgs-val">456</div>
+                                                    </div>
+                                                </div>
+                                            </div>  -->
+                                            
+
+                                        </div>
+                                    </div>
+                                    <div class="box fade">
+                                        <div class="boxInfo">
+                                            <div id="mini-nav-bar">
+                                                <form action="" style="display: flex; align-items: center; gap: 5px;" id="week-options">
+                                                    <input type="radio" name="option" id="plantOption" value="plant" checked>
+                                                    <label for="plantOption"> View by Plant</label>
+                                                    <div style="width: 10px;"></div>
+                                                    <input type="radio" name="option" id="materialOption" value="material">
+                                                    <label for="plantOption"> View by Material Type</label>
+                                                </form>
+
+                                                <div id="date-pick-holder">
+                                                    <div id="reportrange" class="datepick">
+                                                        <i class="fa fa-calendar"></i>&nbsp;
+                                                        <span style="margin-left: 5px; margin-right: 10px;"></span> <i class="fa fa-caret-down"></i>
+                                                    </div>
+                                    
+                                                    
+                                                </div>
+
+                                            </div>
+                                            <div id="chart-display">
+                                                <canvas id="week-graph"></canvas>
+                                            </div>
+                                            <script src="javascript/datepicker.js" type="module"></script>
+                                        </div>
+                                    </div>
+                                    <div class="box fade">
+                                        <div class="boxInfo">
+                                            <div id="mini-nav-bar">
+                                                <form id="month-options" style="display: flex; align-items: center; gap: 5px;">
+                                                    <input type="radio" name="option" id="plantOption" value="plant" checked>
+                                                    <label for="plantOption"> View by Plant</label>
+                                                    <div style="width: 10px;"></div>
+                                                    <input type="radio" name="option" id="materialOption" value="material">
+                                                    <label for="plantOption"> View by Material Type</label>
+                                                </form>
+
+                                                <!-- <div id="date-pick-holder">
+                                                    <div id="reportrange" class="datepick">
+                                                        <i class="fa fa-calendar"></i>&nbsp;
+                                                        <span style="margin-left: 5px; margin-right: 10px;"></span> <i class="fa fa-caret-down"></i>
+                                                    </div>
+                                    
+                                                    <script src="javascript/datepicker.js"></script>
+                                                </div> -->
+                                                
+                                            </div>
+                                            <div id="chart-display">
+                                                <canvas id="myChart"></canvas>
+                                            </div>
+                                            <script src="javascript/lineChart.js"></script> 
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="box fade">
+                                        <!-- <div id="mini-nav-bar">
+                                            <form action="" style="display: flex; align-items: center; gap: 5px;">
+                                                
+                                                <input type="radio" name="option" id="plantOption" value="Plant" checked>
+                                                <label for="plantOption"> View by Plant</label>
+                                                
+                                                <div style="width: 10px;"></div>
+                                                
+                                                <input type="radio" name="option" id="materialOption" value="Material">
+                                                <label for="materialOption"> View by Material Type</label>
+                                                
+                                                
+                                            </form>   
+                                        </div> -->
+
+                                        <div class="boxInfo">
+                                            <!-- <div id="chart-display">
+                                                <canvas id="myChart"></canvas>
+                                            </div> -->
+                                            <!-- <script src="javascript/lineChart.js"></script>  -->
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <script src="javascript/variableGraph.js"></script>
+    
+                        </div>
+
+                        <div id="section1-left-last">
+                            
+                            <div id="summary-div">
+                                <div class="summary-displays"></div>
+                                <div class="summary-displays"></div>
+                                <div class="summary-displays"></div>
+                                <div class="summary-displays"></div>
+                            </div>
+                        </div>
+    
+                    </div>
+                    
+    
+                    <div id="section1-right">
+                        
+                        <div id="section1-right-top">
+                                <div id="gen-report">
+                                    <h3>Generate Report</h3>
+                                    <form action="" id="report-form">
+                                        <div id="gen-report-top">
+                                            <button id="gen-report-button">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
+                                            <div id="filter-holder">
+                                                <label for="day">
+                                                    <input type="radio" name="filter" id="day">
+                                                    Daily
+                                                </label>
+                                                <label for="week">
+                                                    <input type="radio" name="filter" id="week">
+                                                    Weekly
+                                                </label>
+                                                <label for="month">
+                                                    <input type="radio" name="filter" id="month">
+                                                    Monthly
+                                                </label>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <button type="submit" id="download-submit">
+                                                <i class="fa-solid fa-download" style="margin-right: 10px;"></i>
+                                                Download PDF
+                                            </button>  
+                                            <button type="submit" id="report-submit">
+                                                <i class="fa-solid fa-inbox" style="margin-right: 10px;"></i>
+                                                Send to Email
+                                            </button>                                     
+                                            <!-- <input type="email" id="email" style="width: 70%;"> -->
+                                            
+                                        </div> 
+                                    </form>
+                                </div>
+                                <script src="javascript/generatePDF.js"></script>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+       <script src="javascript/sideBar.js"></script>
+    </div>
+
+    
+   
+
+</body>
+</html>

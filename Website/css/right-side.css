@@ -1,0 +1,114 @@
+#section1-right{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    padding-right: 25px;
+    padding-left: 1%;
+}
+
+#section1-right-top{
+    width: 100%;
+    /* background-color: white; */
+    height: 400px;
+    border-radius: 20px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); */
+}
+
+
+
+.dropdown-filter{
+    width: 100px;
+}
+
+.dropdown-button{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    /* background-color: blue; */
+}
+
+.dropdown-menu {
+    height: 0;
+    width: 100px;
+    position: absolute;
+    overflow: hidden;
+    background-color: aquamarine;
+    transition: height 0.3s ease; /* Smooth roll-down effect */
+}
+
+.dropdown-filter:hover .dropdown-menu {
+    height: 100px; /* Maximum height when hovered */
+}
+
+
+
+
+.report-card{
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    display: flex;
+    padding-right: 20px;
+}
+
+.report-card-left{
+    width: 25%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.report-card-right{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.report-card-right-top{
+    height: 40%;
+    display: flex;
+    align-items: end;
+}
+
+.report-card-right-bottom{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.fa-file{
+    font-size: 35px;
+    color: rgb(16, 60, 116);
+}
+
+.fa-file-div{
+    width: 50px;
+    height: 60px;
+    background-color: rgb(184, 210, 243);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+/* .dropdown-menu{
+    height: 200px;
+    background-color: aquamarine;
+    display: none;
+    transition: display 5s;
+} */
+
+/* .dropdown-filter:hover .dropdown-menu{
+    display: block;
+    height: 200px;
+} */
+
