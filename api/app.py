@@ -87,6 +87,10 @@ class Activity(BaseModel):
     code: str
     message: str
 
+class production(BaseModel):
+    plant: str
+    material: str
+    tonnes: int
 # class Status(BaseModel):
 #     plant: str
 #     machine: str
@@ -618,6 +622,34 @@ async def post_activity(activity:Activity):
         now = datetime.now()
         formatted_time = now.strftime("%B %d, %Y – %I:%M %p")
         await send_mail({"email":["tiffanycampbell1710@gmail.com"]},plant, formatted_time,machine)
+
+        cursor.close()
+
+        return "hi"
+    except Exception as e:
+        print(f"Error: {e}")
+        conn.rollback()  # Rollback any failed transaction
+        raise HTTPException(status_code=500, detail="Internal Server Error") # 500??? i am very disappoint
+    
+
+@app.post("/production")
+async def post_activity(product:production):
+
+    cursor = conn.cursor()
+    try:
+
+        plant = product.plant
+        material = product.material
+        tonnes = product.tonnes
+
+        query = f"""INSERT INTO products 
+	                    (plant, material,tonnes) 
+                    VALUES
+	                ('{plant}', '{material}', {tonnes});
+                    """
+        
+        cursor.execute(query)
+        conn.commit()
 
         cursor.close()
 
